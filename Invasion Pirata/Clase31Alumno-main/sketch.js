@@ -99,12 +99,12 @@ function keyReleased() {
          boats.push(boat); 
         } 
         for(var i = 0; i < boats.length; i++){
-           Matter.Body.setVelocity(boats[i].body, { x:-0.9, y:0 });  
+          Matter.Body.setVelocity(boats[i].body, { x:-0.9, y:0 }); 
+          boats[i].display(); 
+          boats[i].animate();
         } 
-        boats[i].display(); 
-        boats[i].animate();
-      } 
-      else{ boat = new Boat(width, height -100, 200, 200, -100, boatAnimation); 
+        
+      }else{ boat = new Boat(width, height -100, 200, 200, -100, boatAnimation); 
         boats.push(boat); 
       } 
     }
